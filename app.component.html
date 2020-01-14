@@ -1,0 +1,81 @@
+
+
+<h1 id="name">Let us learn Angular at {{city}}</h1>
+
+<h3>Boys Gang</h3>
+<div [ngClass] ="{ProdDiv:select  == 1}"(click)="select=1">Dhanush R</div>
+<!-- //conditional class -->
+<div [ngClass] ="{ProdDiv:select  == 2}"(click)="select=2">Likhith</div>
+<div [ngClass] ="{ProdDiv:select  == 3}"(click)="select=3">Json</div>
+<div [ngClass] ="{ProdDiv:select  == 4}"(click)="select=4">Varun</div>
+<div [ngClass] ="{ProdDiv:select  == 5}"(click)="select=5">Rakesh</div>
+
+<!-- Styling -->
+<h1 [ngStyle]="{background:nameColor}">Hello Guys</h1>
+
+
+<!-- 2 way binding -->
+
+<input type="text" name="username" placeholder="Username" [(ngModel)]="userForm.name"><br>
+<input type="text" name="mobile"placeholder="Mobile" [(ngModel)]="userForm.mbl"><br>
+<input type="text" name="email"placeholder="Email" [(ngModel)]="userForm.myl"><br><br>
+
+<button (click)=addEditUser()>
+  <span *ngIf="mode=='add'">Add</span>
+  <span *ngIf="mode=='edit'">Edit</span>
+
+</button>
+
+
+
+
+
+<h2>Username is{{usernameNgVar}}</h2>
+
+<h1>GST=  {{100+20+254}}</h1>
+<h2 *ngIf="showVar=='done'">{{"Hello "+"varun"}}</h2>
+<button (click)="nameClick()">
+  <span *ngIf="showVar=='done'">Hide Text</span>
+  <span *ngIf="showVar=='dont'">Show Text</span>
+</button>
+<br><br><br>
+<h1 *ngIf="signin=='signin';then signinpage else signuppage"></h1>
+<ng-template #signinpage>
+  This is sign in page
+</ng-template>
+<ng-template #signuppage>
+  This is sign up page
+</ng-template>
+
+<ul>
+  <li *ngFor="let item of breakfast;let idx=index">({{idx+1}}) {{item}}</li>
+</ul>
+
+
+<table border="2" cellpadding="10" id="table">
+  <tr>
+    <th>SI</th>
+    <th>Name</th>
+    <th>Mobile</th>
+    <th>Email</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let item of students;let idx=index">
+    <td>{{idx+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.mbl}}</td>
+    <td>{{item.myl}}</td>
+    <td><button (click)="editUser(idx)">Edit</button></td>
+    <td><button (click)="delUser(idx)">Delete</button></td>
+
+
+    
+
+  </tr>
+</table>
+
+<br><br>
+
+
+
