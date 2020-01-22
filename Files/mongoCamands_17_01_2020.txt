@@ -1,0 +1,89 @@
+
+mongod // in 1st powershell
+
+mongo  // in another powershell
+
+db //gives all databases
+
+use databasename // used to create database
+
+db.dropDatabase() // used to drop database
+
+
+db.createUser({
+	"user":"DhanushAdoor",
+	"pwd":"d123",
+	"roles":["readWrite","dbAdmin"]
+})
+
+
+show users // used to get the details enterd by us w. i.e which we have created before using createUser 
+
+show collections // to get 
+
+db.createCollection("students")
+
+
+//s=insert data
+db.students.insert([   
+{
+	"name":"Dhanush R",
+	"mobile":"874561294562",
+	"email":"rdtygvhbj@rdtvbh.com",
+},
+{
+	"name":"Mahesh",
+	"mobile":"874561294562",
+	"email":"rdtygvhbj@rdtvbh.com",
+},
+{
+	"name":"Govinda",
+	"mobile":"874561294562",
+	"email":"rdtygvhbj@rdtvbh.com",
+}
+])
+
+//d data
+
+db.students.update({
+	"mobile":"874561294562"
+},{
+	"mobile":"9845753408"
+
+})
+
+db.students.remove({
+	"name":"Mahesh",
+})
+
+db.students.find().pretty()  //
+
+db.students.findOne() // to find only one
+
+db.students.find({"name":"Govinda"}).pretty() // to find the requird one which we specify
+
+
+
+//or operation
+db.students.find({
+	$or:[{"name":"Govinda"},{"name":" "}]
+})
+
+//and opaertion
+db.students.find({
+	$and:[{"name":"Govinda"},{"mobile":"874561294562"}]
+})
+
+
+
+//$gt -> greater than
+//$lt -> less than
+//$gte -> greater than or equal to
+//$lte -> less than or equal to
+
+db.students.find({
+	"agregate":{$gt:75}
+})
+
+
+ 
