@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial</title>
+</head>
+
+<body>
+    <center><h1 id="hai">Hello world</h1></center>
+
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <button onclick="changeBackgroundColour()">
+        Change background colour
+    </button>
+    <button onclick="forward()">
+        Forward
+    </button>
+    <button onclick="backword()">
+        Backword
+    </button>
+</body>
+
+<script>
+    document.write("<h3>Dhanush R<h3>")
+    //alert("Hai")
+    var hello=document.getElementById("hai");//
+    var msg=hello.innerHTML
+    console.log(msg)
+    var city="Mangaluru"
+    hello.innerHTML="Sahyadri FOOD COURT is best in "+city
+    hello.style.color="#00ff00"
+    hello.style.background="black"
+    hello.style.border="2px #00ff00 solid" 
+    var array =document.getElementsByClassName("text")
+    array[0].innerHTML="This is your Thigale at Varun"
+    array[0].style.color="red"
+    colours=["red","orange","green","white","cyan","lightgreen","black","skyblue","white"]
+    var currentIndex=0
+    // function changeBackgroundColour(){
+    //     for(var i=0;i<array.length;i++){
+    //     array[i].style.color="black"
+    //     array[i].style.background=colours[currentIndex]
+        
+    //     }
+    //     currentIndex++;
+    //     if(currentIndex==(colours.length)-1){
+    //         currentIndex=0
+    //     }
+    // }
+
+    // setInterval(changeBackgroundColour,1000)
+
+    function forward(){
+        for(var i=0;i<array.length;i++){
+        array[i].style.color="black"
+        array[i].style.background=colours[currentIndex]
+        
+        }
+        currentIndex++;
+        if(currentIndex==(colours.length)-1){
+            currentIndex=0
+        }
+    }
+    setInterval(forward(),2000)
+
+    currentIndex=0;
+    function backword(){
+        for(var i=array.length-1;i>=0;i--){
+        array[i].style.color="black"
+        array[i].style.background=colours[currentIndex]
+        
+        }
+        currentIndex--;
+        if(currentIndex==0){
+            currentIndex=array.length-1
+        }
+    }
+    setInterval(backword(),2000)
+</script>
+
+</html>

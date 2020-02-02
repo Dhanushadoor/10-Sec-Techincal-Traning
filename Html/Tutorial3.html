@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial</title>
+</head>
+
+<body>
+    <input type="text" id="food" />
+    <button onclick="addItem()">
+        Add Item    
+    </button>   
+    <ul id="list">
+        <li>
+            Pizza
+        </li>
+        <li>
+            pani puri
+        </li>
+        <li>
+            cake
+        </li>
+        <!-- //pending............................... -->
+    </ul>
+    <script src="jqery.js"></script>
+    <script>
+        function addItem(){
+            var myList=$('#food').val()
+            $('#list').append('<li>'+myList+'</li>')
+        }
+        $("#food").children().css("backgroundColor","red")
+    </script>
+</body>
+</html>

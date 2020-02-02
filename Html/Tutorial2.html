@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial</title>
+</head>
+
+<body>
+    <input type="text" id="food" />
+    <button onclick="addItem()">
+        Add Item    
+    </button>   
+    <ul>
+        <li>
+            Pizza
+        </li>
+        <li>
+            pani puri
+        </li>
+        <li>
+            cake
+        </li>
+    </ul>
+    <script src="jqery.js"></script>
+    <script>
+        function addItem(){
+            var myList=$('#food').val()
+            $('#list').append('<li>'+myList+'</li>')
+        }
+        $("#food").first().children().css("bacgroundColor","red")
+    </script>
+        
+    
+    <!-- <center><h1 id="hai">Hello world</h1></center>
+
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <p class ="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius totam magni illum unde facere et aliquid officia rem rerum dolor nam iste, ipsa corporis ea. Rem quae repellat in.</p>
+    <button onclick="hidePara()" id="bHide">
+        Hide Para 
+    </button> -->
+</body>
+    <!-- <script src="jqery.js">
+
+    </script>
+    <script>
+        // this is by using jquery very simple bro......
+
+        var hello=$("#hai")
+        var msg=hello.html()
+        document.write(msg)
+        hello.html("<br>Dhanush R Here<br>")
+        hello.css({"color":"red","background":"skyblue"})
+
+        var pararray=$(".text")
+        pararray.css("color","purple")
+        pararray.css({"color":"purple","backgroundColor":"pink"})
+
+        hello.append("How are you") 
+        hello.prepend("Namasthe")
+
+        function hidePara(){
+            if(pararray.css("display")=="none"){
+
+                pararray.show();
+                $("#bHide").html("Hide Para")
+            }
+            else{
+                pararray.hide()
+                $("#bHide").html("Show Para")
+            }
+                
+        }
+    </script> -->
+
+</html>
